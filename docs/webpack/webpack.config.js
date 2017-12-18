@@ -4,7 +4,7 @@ module.exports = {
   entry: './base/core.js',
   output: {
     path: __dirname + 'js/',
-    filename: '_core.js'
+    filename: 'core.js' // or _core.js
   },
   module: {
     rules: [

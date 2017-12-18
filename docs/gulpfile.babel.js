@@ -36,7 +36,9 @@ import sftp from 'gulp-sftp' // sftp plugin.
 import browserSync from 'browser-sync' // browserSync.
 // Setting.
 const autoprefixerSet = ['last 2 version', 'ie >= 10', 'iOS >= 8', 'Android >= 4.4'] // setting of autoprefixer.
-const postCssPlugIn = [autoprefixer({ browsers: autoprefixerSet }), flexbug] // PostCSS plugin.
+const postCssPlugIn = [autoprefixer({
+  browsers: autoprefixerSet
+}), flexbug] // PostCSS plugin.
 const addImgDir = ('addImages/*') // added image fold,
 const dstImgDir = ('images/') // compression image fold,
 const upLoadFileWrite = (['*.html', 'css/app.min.css', 'js/core.min.js', 'images/*']) // upload file.
@@ -197,11 +199,11 @@ gulp.task('ftpUpLoad', () => {
 gulp.task('default', ['browserSync'], () => { // first task, local server connect & local browser sync.
   // ↓Select a task according to the project. プロジェクトで使用するタスクを選択しましょう。↓
   gulp.watch(['base/*', 'tags/**/*'], ['webpack']) // JS File webpack.
-  gulp.watch(['js/_core.js'], ['concat']) // JS File Concatenate.
   gulp.watch('js/core.js', ['jsmin']) // watching change's JS flie, File Compression.
   gulp.watch('sass/**/*.scss', ['sass']) // watching sass file save's auto compile & add vendor prefix automatically.
   gulp.watch('css/app.css', ['cssmin']) // watching change's CSS flie, File Compression.
   gulp.watch(addImgDir, ['imgMin', 'svgMin']) // watching Img Dir compression.
+  //gulp.watch(['js/_core.js'], ['concat']) // JS File Concatenate.
   //gulp.watch('ejs/*', ['ejs']) // watch ejs.
   //gulp.watch('**/*.html', ['prettify']) // watch prettify.
   //gulp.watch('**/*', ['rename']) // watching Rename Task.
