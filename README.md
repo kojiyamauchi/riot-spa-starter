@@ -2,8 +2,10 @@
 
 <https://kojiyamauchi.github.io/riot-spa-starter-kit/>
 
-## Usage.  
-・Clone or Download This Repository.  
-・Move on docs Dir & This Dir's Root.  
-・npm install or yarn.  
+## Usage.
+
+・Clone or Download This Repository.<br>
+・Move on docs Dir & This Dir's Root.<br>
+・npm init or yarn init.<br>
+・npm install or yarn.<br>
 ・gulp.
