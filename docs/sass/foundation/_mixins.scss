@@ -1,0 +1,48 @@
+@charset "UTF-8";
+@import 'variables';
+/*==============================================================================
+
+ Mixins SCSS.
+
+  Design Concept
+ ・FLOCCS
+  => https://github.com/hiloki/flocss
+
+==============================================================================*/
+// BreakPoints
+@mixin largeDesktop {
+   @media (min-width: #{$largeDesktopWidth}){
+    @content;
+  }
+}
+@mixin desktop {
+   @media (min-width: #{$desktopWidth}){
+    @content;
+  }
+}
+@mixin tablet {
+   @media (max-width: #{$tabletWidth}){
+    @content;
+  }
+}
+@mixin largeMobile {
+   @media (max-width: #{$largeMobileWidth}){
+    @content;
+  }
+}
+@mixin mobile {
+   @media (max-width: #{$mobileWidth}){
+    @content;
+  }
+}
+// clearfix
+@mixin clearfix {
+  clear: both;
+
+  &:after,
+  &:before {
+    display: block;
+    clear: both;
+    content: " ";
+  }
+}

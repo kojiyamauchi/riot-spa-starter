@@ -1,0 +1,102 @@
+@charset "UTF-8";
+@import '../../foundation/mixins';
+/*==============================================================================
+
+ Utilities SCSS.
+
+ Design Concept
+・FLOCCS
+ => https://github.com/hiloki/flocss
+
+ Naming Conventions
+ ・Prefix
+  => u-
+ ・If concatenate class name, using kebab-case only.
+  => .u-inline-block-pc {}
+
+ Usage
+  <div class="u-pc"></div>
+
+==============================================================================*/
+/* over 769px */
+.u-pc {
+  display: block;
+}
+
+.u-inline-block-pc {
+  display: inline-block;
+}
+
+.u-inline-pc {
+  display: inline;
+}
+
+.u-flex-pc {
+  display: flex;
+}
+
+.u-inline-flex-pc {
+  display: inline-flex;
+}
+
+.u-sp {
+  display: none;
+}
+
+.u-inline-block-sp {
+  display: none;
+}
+
+.u-inline-sp {
+  display: none;
+}
+
+.u-flex-sp {
+  display: none;
+}
+
+.u-inline-flex-sp {
+  display: none;
+}
+/* under 768px */
+@include tablet {
+  .u-pc {
+    display: none;
+  }
+
+  .u-inline-block-pc {
+    display: none;
+  }
+
+  .u-inline-pc {
+    display: none;
+  }
+
+  .u-flex-pc {
+    display: none;
+  }
+
+  .u-inline-flex-pc {
+    display: none;
+  }
+
+  .u-sp {
+    display: block;
+  }
+
+  .u-inline-block-sp {
+    display: inline-block;
+  }
+
+  .u-inline-sp {
+    display: inline;
+  }
+
+  .u-flex-sp {
+    display: flex;
+  }
+
+  .u-inline-flex-sp {
+    display: inline-flex;
+  }
+}
