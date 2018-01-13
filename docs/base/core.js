@@ -30,3 +30,11 @@ route('/third', () => riot.mount('main-contents', 'third-page'))
 route.start(true)
 
 // If Use Global Logic, Write Below.
+// No Setting Server Side for SPA. Do Not Reload.
+window.onload = () => {
+  window.addEventListener("keydown", reloadOff, false);
+}
+
+function reloadOff(e) {
+  e.preventDefault();
+}

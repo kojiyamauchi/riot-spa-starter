@@ -7229,6 +7229,14 @@ _riotRoute2.default.base('/riot-spa-starter-kit/'); // Setting Base Route.
 _riotRoute2.default.start(true);
 
 // If Use Global Logic, Write Below.
+// No Setting Server Side for SPA. Do Not Reload.
+window.onload = function () {
+  window.addEventListener("keydown", reloadOff, false);
+};
+
+function reloadOff(e) {
+  e.preventDefault();
+}
 
 /***/ }),
 /* 136 */
