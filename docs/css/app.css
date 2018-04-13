@@ -1,372 +1,285 @@
-@charset "UTF-8";
+@charset 'UTF-8';
 /*==============================================================================
 
  App SCSS.
-
-   Design Concept
-  ・FLOCCS
-   => https://github.com/hiloki/flocss
 
 ==============================================================================*/
 /*==============================================================================
 
  Variables SCSS.
 
-  Design Concept
- ・FLOCCS
-  => https://github.com/hiloki/flocss
-
 ==============================================================================*/
 /*==============================================================================
 
  Mixins SCSS.
-
-  Design Concept
- ・FLOCCS
-  => https://github.com/hiloki/flocss
 
 ==============================================================================*/
 /*==============================================================================
 
 Reset & Default Setting SCSS.
 
-   Design Concept
-  ・FLOCCS
-   => https://github.com/hiloki/flocss
-
 ==============================================================================*/
 /*------------------------------------------------------------------------------
  Import Google Web Font.
 ------------------------------------------------------------------------------*/
-@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300);
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,700,900);
 @import url(https://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
 @import url(https://fonts.googleapis.com/css?family=Lobster);
 /*------------------------------------------------------------------------------
  Reset & Default Setting CSS.
 ------------------------------------------------------------------------------*/
 /* Reset CSS. */
-a , address , article , aside , audio , blockquote , body , canvas , caption , code , dd , div , dl , dt , footer , form , h1 , h2 , h3 , h4 , h5 , h6 , header , hgroup , html , iframe , img , input , label , li , mark , menu , nav , ol , output , p , pre , ruby , section , span , summary , table , tbody , td , textarea , th , time , tr , ul , video {
-  margin: 0;
-  padding: 0;
-  vertical-align: baseline;
-  font-size: 100%;
-  font-weight: normal;
-  font-style: normal;
-  border: 0;
+a,
+address,
+article,
+aside,
+audio,
+blockquote,
+body,
+canvas,
+caption,
+code,
+dd,
+div,
+dl,
+dt,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+html,
+iframe,
+img,
+input,
+label,
+li,
+mark,
+menu,
+nav,
+ol,
+output,
+p,
+pre,
+ruby,
+section,
+span,
+summary,
+table,
+tbody,
+td,
+textarea,
+th,
+time,
+tr,
+ul,
+video
+{
+    font-size: 100%;
+    font-weight: normal;
+    font-style: normal;
+
+    margin: 0;
+    padding: 0;
+
+    vertical-align: baseline;
+
+    border: 0;
 }
 
 /* Default Setting */
-html {
-  width: 100%;
-  height: 100%;
+html
+{
+    width: 100%;
+    height: 100%;
 }
 
-body {
-  position: relative;
-  width: 100%;
-  letter-spacing: 0;
-  font-family: "Source Sans Pro", "Noto Sans Japanese", "Helvetica Neue", Helvetica, arial, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
-  font-size: 100%;
-  line-height: 1;
-  color: #555;
-  background: #fff;
-  -webkit-text-size-adjust: 100%;
-
-  -webkit-overflow-scrolling: touch;
-  -ms-text-size-adjust: 100%;
-}
-
-article , aside , details , figcaption , figure , footer , header , hgroup , menu , nav , section {
-  display: block;
-}
-
-a {
-  -webkit-transition: opacity .5s;
-  transition: opacity .5s;
-  text-decoration: none;
-  opacity: 1;
-  color: inherit;
-  background: transparent;
-}
-
-a:hover {
-  -webkit-transition: opacity .5s;
-  transition: opacity .5s;
-  opacity: .5;
-  color: inherit;
-}
-
-a:active , a:hover , a:link , a:visited {
-  text-decoration: none;
-  color: inherit;
-}
-
-img {
-  vertical-align: middle;
-}
-
-li , ol , ul {
-  list-style-type: none;
-}
-
-table {
-  table-layout: fixed;
-  border-spacing: 0;
-  border-collapse: collapse;
-}
-
-input[type="button"] , input[type="submit"] , input[type="text"] {
-  border-radius: 0;
-  -webkit-appearance: none;
-}
-
-textarea {
-  resize: vertical;
-  border-radius: 0;
-  -webkit-appearance: none;
-}
-
-* {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-
-  -ms-box-sizing: border-box;
-}
-
-::-moz-selection {
-  background: RGBa();
-}
-
-::selection {
-  background: RGBa();
-}
-
-::-moz-selection {
-  background: RGBa();
-}
-
-@media screen and (-webkit-min-device-pixel-ratio: 0) {
-  /* Safari Hack */
-}
-
-@media all and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: .001dpcm) {
-  /* Chrome Hack */
-}
-
-@-moz-document url-prefix() {
-  /* FireFox Hack */
-}
-
-@media all and (-ms-high-contrast: none) {
-  /* IE Hack */
-}
-
-@media (max-width: 768px) {
-  body {
-    font-size: 85%;
-  }
-}
-
-@media (max-width: 480px) {
-  body {
+body
+{
+    font-family: 'Source Sans Pro', 'Noto Sans Japanese', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', '游ゴシック Medium', meiryo, sans-serif;
     font-size: 65%;
-  }
+    line-height: 1;
+
+    position: relative;
+
+    width: 100%;
+
+    letter-spacing: 0;
+
+    color: #555;
+    background: #fff;
+
+    -webkit-overflow-scrolling: touch;
+    -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
 }
 
-/*==============================================================================
-
- Extends SCSS.
-
-   Design Concept
-  ・FLOCCS
-   => https://github.com/hiloki/flocss
-
-==============================================================================*/
-/*==============================================================================
-
- Variables SCSS.
-
-  Design Concept
- ・FLOCCS
-  => https://github.com/hiloki/flocss
-
-==============================================================================*/
-/*==============================================================================
-
- Mixins SCSS.
-
-  Design Concept
- ・FLOCCS
-  => https://github.com/hiloki/flocss
-
-==============================================================================*/
-/*==============================================================================
-
- Variables SCSS.
-
-  Design Concept
- ・FLOCCS
-  => https://github.com/hiloki/flocss
-
-==============================================================================*/
-/*==============================================================================
-
- Variables SCSS.
-
-  Design Concept
- ・FLOCCS
-  => https://github.com/hiloki/flocss
-
-==============================================================================*/
-/*==============================================================================
-
- Mixins SCSS.
-
-  Design Concept
- ・FLOCCS
-  => https://github.com/hiloki/flocss
-
-==============================================================================*/
-/*==============================================================================
-
- Utilities SCSS.
-
- Design Concept
-・FLOCCS
- => https://github.com/hiloki/flocss
-
- Naming Conventions
- ・Prefix
-  => u-
- ・If concatenate class name, using kebab-case only.
-  => .u-inline-block-pc {}
-
- Usage
-  <div class="u-pc"></div>
-
-==============================================================================*/
-/* over 769px */
-.u-pc {
-  display: block;
+@media (min-width: 480px)
+{
+    body
+    {
+        font-size: 85%;
+    }
 }
 
-.u-inline-block-pc {
-  display: inline-block;
+@media (min-width: 768px)
+{
+    body
+    {
+        font-size: 100%;
+    }
 }
 
-.u-inline-pc {
-  display: inline;
-}
-
-.u-flex-pc {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.u-inline-flex-pc {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-}
-
-.u-sp {
-  display: none;
-}
-
-.u-inline-block-sp {
-  display: none;
-}
-
-.u-inline-sp {
-  display: none;
-}
-
-.u-flex-sp {
-  display: none;
-}
-
-.u-inline-flex-sp {
-  display: none;
-}
-
-/* under 768px */
-@media (max-width: 991px) {
-  .u-pc {
-    display: none;
-  }
-  .u-inline-block-pc {
-    display: none;
-  }
-  .u-inline-pc {
-    display: none;
-  }
-  .u-flex-pc {
-    display: none;
-  }
-  .u-inline-flex-pc {
-    display: none;
-  }
-  .u-sp {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section
+{
     display: block;
-  }
-  .u-inline-block-sp {
-    display: inline-block;
-  }
-  .u-inline-sp {
-    display: inline;
-  }
-  .u-flex-sp {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  .u-inline-flex-sp {
-    display: -webkit-inline-box;
-    display: -webkit-inline-flex;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-  }
+}
+
+strong
+{
+    font-weight: bold;
+}
+
+a
+{
+    -webkit-transition: opacity .5s;
+            transition: opacity .5s;
+    text-decoration: none;
+
+    opacity: 1;
+    color: inherit;
+    background: transparent;
+}
+
+a:hover
+{
+    -webkit-transition: opacity .5s;
+            transition: opacity .5s;
+
+    opacity: .5;
+    color: inherit;
+}
+
+a:active,
+a:hover,
+a:link,
+a:visited
+{
+    text-decoration: none;
+
+    color: inherit;
+    outline: none;
+}
+
+img
+{
+    vertical-align: middle;
+}
+
+li,
+ol,
+ul
+{
+    list-style-type: none;
+}
+
+table
+{
+    table-layout: fixed;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+input[type='button'],
+input[type='submit'],
+input[type='text']
+{
+    border-radius: 0;
+
+    -webkit-appearance: none;
+}
+
+textarea
+{
+    resize: vertical;
+
+    border-radius: 0;
+
+    -webkit-appearance: none;
+}
+
+*
+{
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+
+        -ms-box-sizing: border-box;
+}
+
+::-moz-selection
+{
+    background: RGBa();
+}
+
+::selection
+{
+    background: RGBa();
+}
+
+::-moz-selection
+{
+    background: RGBa();
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0)
+{
+    /* Safari Hack */
+}
+
+@media all and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: .001dpcm)
+{
+    /* Chrome Hack */
+}
+
+@-moz-document url-prefix()
+{
+    /* FireFox Hack */
+}
+
+@media all and (-ms-high-contrast: none)
+{
+    /* IE Hack */
 }
 
 /*==============================================================================
 
- Z-index SCSS.
-
-  Design Concept
- ・FLOCCS
-  => https://github.com/hiloki/flocss
+ Variables SCSS.
 
 ==============================================================================*/
-.u-zindex3 {
-  z-index: 2000;
-}
+/*==============================================================================
 
-.u-zindex2 {
-  z-index: 1000;
-}
+ Variables SCSS.
 
-.u-zindex1 {
-  z-index: -1000;
-}
+==============================================================================*/
+/*==============================================================================
 
-.u-layer1 {
-  z-index: 1;
-}
+ Mixins SCSS.
 
-.u-layer2 {
-  z-index: 2;
-}
-
-.u-layer3 {
-  z-index: 3;
-}
-
-.u-layer4 {
-  z-index: 4;
-}
+==============================================================================*/
 
 /*# sourceMappingURL=../maps/app.css.map */

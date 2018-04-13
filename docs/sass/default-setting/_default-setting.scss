@@ -1,18 +1,14 @@
 @charset "UTF-8";
-@import 'mixins.scss';
+@import '../mixins/_mixins.scss';
 /*==============================================================================
 
 Reset & Default Setting SCSS.
-
-   Design Concept
-  ・FLOCCS
-   => https://github.com/hiloki/flocss
 
 ==============================================================================*/
 /*------------------------------------------------------------------------------
  Import Google Web Font.
 ------------------------------------------------------------------------------*/
-@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300);
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,700,900);
 @import url(https://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
 @import url(https://fonts.googleapis.com/css?family=Lobster);
 /*------------------------------------------------------------------------------
@@ -91,10 +87,16 @@ body {
   color: #555;
   background: #fff;
   font-family: "Source Sans Pro", "Noto Sans Japanese", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "游ゴシック Medium", meiryo, sans-serif;
-  font-size: 100%;
+  font-size: 65%;
   line-height: 1;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
+  @include mobile {
+    font-size: 85%;
+  }
+  @include largeMobile {
+    font-size: 100%;
+  }
 }
 
 article,
@@ -205,15 +207,5 @@ textarea {
   /* IE Hack */
   * {
     // Add Property.
-  }
-}
-@include largeMobile {
-  body {
-    font-size: 85%;
-  }
-}
-@include mobile {
-  body {
-    font-size: 65%;
   }
 }

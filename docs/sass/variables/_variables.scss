@@ -3,14 +3,11 @@
 
  Variables SCSS.
 
-  Design Concept
- ・FLOCCS
-  => https://github.com/hiloki/flocss
-
 ==============================================================================*/
 // BreakPoints.
-$largeDesktopWidth: '1392px';
-$desktopWidth: '992px';
-$tabletWidth: '991px';
-$largeMobileWidth: '768px';
+$smallMobileWidth: '325px';
 $mobileWidth: '480px';
+$largeMobileWidth: '768px';
+$tabletWidth: '991px';
+$desktopWidth: '1170px';
+$largeDesktopWidth: '1392px';
