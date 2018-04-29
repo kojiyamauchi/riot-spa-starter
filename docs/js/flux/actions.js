@@ -1,13 +1,19 @@
-// Flux Architecture, -Action- Script.
+// Flux Architecture, Action Script.
 import RiotControl from 'riotcontrol'
+
 let TodoAction
 
 TodoAction = {
   // Actions Core Functions.
   addActionsFunctionName: () => {
-    // ↓ Dispatch Stores.js, Trigger Stores Functions. ↓
+
+    // Add Functions Start.
+    // Add Functions End.
+
+    // Dispatch Stores.js, Trigger Stores Functions Below.
     RiotControl.trigger('addStoresFunctionName')
   }
 }
 
-module.exports = TodoAction // Export This Modules.
+ // Export Actions Modules.
+module.exports = TodoAction

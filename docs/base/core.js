@@ -8,13 +8,13 @@ import route from 'riot-route'
 import 'babel-polyfill'
 
 // Import Components Tags.
-import '../tags/app.tag'
-import '../tags/components/header/global-header.tag'
-import '../tags/components/footer/global-footer.tag'
-import '../tags/components/navigation/global-nav.tag'
-import '../tags/pages/top-page.tag'
-import '../tags/pages/second-page.tag'
-import '../tags/pages/third-page.tag'
+import '@/tags/app.tag'
+import '@/tags/components/header/global-header.tag'
+import '@/tags/components/footer/global-footer.tag'
+import '@/tags/components/navigation/global-nav.tag'
+import '@/tags/pages/top-page.tag'
+import '@/tags/pages/second-page.tag'
+import '@/tags/pages/third-page.tag'
 // Created Stores Instance.
 //RiotControl.addStore(new TodoStore())
 // Mounted Components.

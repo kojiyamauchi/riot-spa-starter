@@ -1,18 +1,24 @@
-// Flux Architecture, -Store- Script.
+// Flux Architecture, Stores Script.
 import riot from 'riot'
+
 let TodoStore
 
 TodoStore = () => {
-  riot.observable(this) // Dispatcher.
+  // Dispatcher is Below.
+  riot.observable(this)
 
   let self = this
 
-  // Stores Core Logic.
+  // Stores Core Functions.
   self.on('addStoresFunctionName', () => {
-    // ↓Add Logic Start↓.
-    // ↑Add Logic End↑.
-    self.trigger('addComponentsFunction', self.lists) // Dispatch Template.tag -> addComponentsFunction.
+
+    // Add Functions Start.
+    // Add Functions End.
+
+    // Dispatch Template.tag -> addComponentsFunction.
+    self.trigger('addComponentsFunction', self.lists)
   })
 }
 
-module.exports = TodoStore // Require This Flie. Using Node.js, module.exports.
+// Export Stores Modules.
+module.exports = TodoStore
